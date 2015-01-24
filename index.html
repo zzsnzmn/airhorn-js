@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        var snd = new Audio('airhorn.wav');
+        //snd.play();
+        snd.trigger = function() {
+            this.pause();
+            this.currentTime = 0;
+            this.play();
+        }
+    </script>
+    <button onclick="snd.trigger()">
+        airhorn
+    </button>
+</html>
